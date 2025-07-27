@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome-free-6.7.2-web/css/all.min.css"> 
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+<nav style="height: 80px;" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+    <a class="navbar-brand" href="foodmood.html"><span style="font-size: xx-large;color: lightblue;">Food</span><span style="font-size: xx-large;color: white;">Mood</span></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="foodmood.html"><i class="fas fa-home me-1"></i>🏡Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./moods.html"><i class="fas fa-smile me-1"></i>Moods</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-utensils me-1"></i>🍴Recipes</a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="./aboutpage.html"><i class="fas fa-info-circle me-1"></i>About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i>📧ContactUs</a>
+        </li>
+    </ul>
+</div>
+</div>
+    </nav>
+  <style>
+    body {
+      margin-top: 70px;
+      background-color: #00050a;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://i.pinimg.com/736x/70/93/b0/7093b0f6895d246587bf4a7afacb79f3.jpg');
+      background-size: cover; 
+      background-repeat: no-repeat; 
+      background-position: center;
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .recipe-title {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+    button {
+      background-color: #011c39;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(3, 1, 45, 0.2);
+    }
+    .recipe {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-5">
+  <h1 style="color: beige;font-size: 100px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="text-center mb-4">Summer Vibes</h1>
+  
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+    <!-- Template block for each recipe card -->
+    <!-- You will find all six cards below, with correct ids and showRecipe linkage -->
+
+    <!-- START LOOP -->
+    <!-- Replace placeholder values with correct IDs -->
+    
+    <!-- 1. Quinoa Chickpea Salad -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="mintsalad.jpg" class="card-img-top" alt="Mint Salad">
+        <div class="card-body">
+          <h5 class="recipe-title">Mint Salad</h5>
+          <p class="card-text">Juicy watermelon cubes tossed with crumbled feta, fresh mint, a drizzle of honey, and lime juice.</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('salad')">CHECK RECIPE</button>
+            <a href="https://www.youtube.com/watch?v=J_0tTvBbc8w" target="_blank"><button>RECIPE VIDEO</button></a>
+          </div>
+          <div id="salad" class="recipe" style="display: none">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>1 cup chopped cucumber</li>
+              <li>¼ cup fresh mint leaves</li>
+              <li>½ cup plain yogurt</li>
+              <li>1 tbsp lemon juice</li>
+              <li>Salt & pepper to taste</li>
+              
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+                <li>Mix yogurt, lemon juice, salt, and pepper.</li>
+                <li>Stir in cucumber and chopped mint.</li>
+                <li>Chill and serve cold.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="mango.png" class="card-img-top" alt="Mango">
+        <div class="card-body">
+          <h5 class="recipe-title">Mango Yogurt</h5>
+          <p class="card-text">Layers of chilled Greek yogurt, mango puree, granola, and fresh fruit!!</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('stirfry')">CHECK RECIPE</button>
+            <a href="https://www.youtube.com/watch?v=5iPoSsbHQIs" target="_blank"><button>RECIPE VIDEO</button></a>
+          </div>
+          <div id="stirfry" class="recipe" style="display: none">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>1 ripe mango (chopped)</li>
+              <li>1 cup plain yogurt</li>
+              <li>1 tsp honey or sugar</li>
+              <li>Optional: cardamom powder</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Blend mango and yogurt until smooth.</li>
+              <li>Add honey and optional cardamom.</li>
+              <li>Chill and serve as a dessert or snack.</li>
+            </ol>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="raita.png" class="card-img-top" alt="Raita">
+        <div class="card-body">
+          <h5 class="recipe-title">Raita</h5>
+          <p class="card-text">Grated cucumber mixed with chilled curd, cumin powder, mint, salt, and a hint of black salt</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('pancakes')">CHECK RECIPE</button>
+            <a href="https://www.youtube.com/watch?v=OMFrJG28NYU" target="_blank"><button>RECIPE VIDEO</button></a>
+          </div>
+          <div id="pancakes" class="recipe" style="display: none">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>1 cup plain yogurt</li>
+              <li>½ cup grated cucumber or chopped veggies</li>
+              <li>1 tsp roasted cumin powder</li>
+              <li>Salt to taste</li>
+              <li>Optional: chopped coriander</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Whisk yogurt until smooth.</li>
+              <li>Add vegetables, salt, and cumin powder.</li>
+              <li>Mix well and serve chilled.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="rice.png" class="card-img-top" alt="Rice & curry">
+        <div class="card-body">
+          <h5 class="recipe-title">Rice & Curry</h5>
+          <p class="card-text">Soft rice mixed with chilled curd, tempered with mustard seeds, green chilies, and curry leaves, topped with pomegranate.</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('zoodles')">CHECK RECIPE</button>
+            <a href="https://www.youtube.com/watch?v=3h15T-d6zHA" target="_blank"><button>RECIPE VIDEO</button></a>
+          </div>
+          <div id="zoodles" class="recipe" style="display: none">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>1 cup cooked rice</li>
+              <li>1 cup mixed vegetable curry or dal</li>
+              <li>Spices (turmeric, chili, cumin)</li>
+              <li>Salt to taste</li>
+              <li>1 tbsp oil or ghee</li>
+              
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Prepare curry with vegetables and spices.</li>
+              <li>Serve hot with steamed rice.</li>
+              <li>Optional: add pickle or salad on the side.</li>
+              
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="tacos.png" class="card-img-top" alt="Tacos">
+        <div class="card-body">
+          <h5 class="recipe-title">Tacos</h5>
+          <p class="card-text">Mini tortillas with grilled paneer cubes, sautéed sweet corn, onions, and coriander chutney</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('chia')">CHECK RECIPE</button>
+            <a href="https://www.youtube.com/watch?v=emgRgUctsqg" target="_blank"><button>RECIPE VIDEO</button></a>
+          </div>
+          <div id="chia" class="recipe" style="display: none">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>4 taco shells</li>
+              <li>1 cup mixed veggies</li>
+              <li>½ cup cooked beans</li>
+              <li>Salsa or tomato chutney</li>
+              <li>Optional: cheese, lettuce</li>
+              
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Fill taco shells with beans and veggies.</li>
+              <li>Add salsa and toppings.</li>
+              <li>Serve immediately for crunchiness.</li>
+              
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="rose.png" class="card-img-top" alt="Rose">
+        <div class="card-body">
+          <h5 class="recipe-title">Rose Lemonade</h5>
+          <p class="card-text">Rose Lemonade is a refreshing summer drink made by mixing rose syrup (like Rooh Afza), fresh lemon juice, and chilled soda or water</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('detox')">CHECK RECIPE</button>
+            <a href="https://www.youtube.com/live/OOJudu_auSQ" target="_blank"><button>RECIPE VIDEO</button></a>
+          </div>
+          <div id="detox" class="recipe" style="display: none">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>1 cup cold water</li>
+              <li>1 tbsp lemon juice</li>
+              <li>1 tsp rose water</li>
+              <li>1 tbsp sugar or honey</li>
+              <li>Ice cubes</li>
+              
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+               <li>Mix lemon juice, rose water, and sweetener in water.</li>
+               <li>Add ice and stir well.</li>
+               <li>Serve chilled and enjoy.</li>
+              
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function showRecipe(id) {
+  document.getElementById(id).style.display = 'block';
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

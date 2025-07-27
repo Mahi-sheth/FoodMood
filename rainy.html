@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome-free-6.7.2-web/css/all.min.css"> 
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+<nav style="height: 80px;" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+    <a class="navbar-brand" href="foodmood.html"><span style="font-size: xx-large;color: lightblue;">Food</span><span style="font-size: xx-large;color: white;">Mood</span></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="foodmood.html"><i class="fas fa-home me-1"></i>🏡Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./moods.html"><i class="fas fa-smile me-1"></i>Moods</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-utensils me-1"></i>🍴Recipes</a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="./aboutpage.html"><i class="fas fa-info-circle me-1"></i>About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i>📧ContactUs</a>
+        </li>
+    </ul>
+</div>
+</div>
+    </nav>
+  <style>
+    body {
+      margin-top: 70px;
+      background-color: #00050a;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://i.pinimg.com/736x/70/93/b0/7093b0f6895d246587bf4a7afacb79f3.jpg');
+      background-size: cover; 
+      background-repeat: no-repeat; 
+      background-position: center;
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .recipe-title {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+    button {
+      background-color: #011c39;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(3, 1, 45, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-5">
+  <h1 style="color: beige; font-size: 100px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="text-center mb-4">RAINY DAY FEELS</h1>
+  
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+    <!-- Chai -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="chai.jpg" class="card-img-top" alt="Chai">
+        <div class="card-body">
+          <h5 class="recipe-title">Masala Chai</h5>
+          <p class="card-text">A comforting blend of tea, milk, spices, and sweetness—perfect for cozy rainy days.</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('chai')">CHECK RECIPE</button>
+            <a href="https://youtu.be/2KI-PGM7PYQ?si=-GGg1RYV1zoOhp4z" target="_blank">
+              <button>RECIPE VIDEO</button>
+            </a>
+          </div>
+          <div id="chai" class="recipe" style="display: none; margin-top: 20px;">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>1 cup water</li>
+              <li>½ cup milk</li>
+              <li>1 tsp tea leaves</li>
+              <li>2 crushed cardamom pods</li>
+              <li>1 small piece ginger (grated)</li>
+              <li>1-2 tsp sugar (to taste)</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Boil water with ginger and cardamom.</li>
+              <li>Add tea leaves and let it simmer for 2 minutes.</li>
+              <li>Add milk and sugar, then bring to a boil.</li>
+              <li>Strain into a cup and enjoy hot.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tomato Soup -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="tomato.jpeg" class="card-img-top" alt="Tomato Soup">
+        <div class="card-body">
+          <h5 class="recipe-title">Tomato Soup</h5>
+          <p class="card-text">A classic comfort soup made with ripe tomatoes, herbs, and a dash of cream.</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('soup')">CHECK RECIPE</button>
+            <a href="https://youtube.com/shorts/LwksxC5OXF0?si=vSG6y-asKSzvzvop" target="_blank">
+              <button>RECIPE VIDEO</button>
+            </a>
+          </div>
+          <div id="soup" class="recipe" style="display: none; margin-top: 20px;">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>4 ripe tomatoes (chopped)</li>
+              <li>1 onion (chopped)</li>
+              <li>2 garlic cloves</li>
+              <li>1 cup vegetable broth or water</li>
+              <li>Salt & pepper to taste</li>
+              <li>1 tbsp cream (optional)</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Sauté onion and garlic in a pan.</li>
+              <li>Add tomatoes and cook until soft.</li>
+              <li>Blend the mixture and strain if desired.</li>
+              <li>Simmer with broth, season, and add cream.</li>
+              <li>Serve hot with croutons or bread.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Potato Wedges -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="potato.jpeg" class="card-img-top" alt="Potato Wedges">
+        <div class="card-body">
+          <h5 class="recipe-title">Crispy Potato Wedges</h5>
+          <p class="card-text">Golden-baked potato wedges seasoned to perfection. Crispy outside, fluffy inside!</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('wedges')">CHECK RECIPE</button>
+            <a href="https://youtube.com/shorts/5BRDZTWBgQ0?si=Ni1F6y4At9M6qcLG" target="_blank">
+              <button>RECIPE VIDEO</button>
+            </a>
+          </div>
+          <div id="wedges" class="recipe" style="display: none; margin-top: 20px;">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>3 potatoes (cut into wedges)</li>
+              <li>2 tbsp olive oil</li>
+              <li>1 tsp paprika</li>
+              <li>½ tsp garlic powder</li>
+              <li>Salt & pepper to taste</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Preheat oven to 220°C (425°F).</li>
+              <li>Toss wedges with oil and spices.</li>
+              <li>Arrange on baking tray and bake 35–40 minutes, flipping halfway.</li>
+              <li>Serve hot with dip.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hot Chocolate -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="hot.jpeg" class="card-img-top" alt="Hot Chocolate">
+        <div class="card-body">
+          <h5 class="recipe-title">Hot Chocolate</h5>
+          <p class="card-text">Creamy, dreamy hot cocoa made with real chocolate—pure winter bliss in a mug!</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('hotchoc')">CHECK RECIPE</button>
+            <a href="https://youtube.com/shorts/tkTl2dBqmQY?si=5txNffUkqrmBXJCM" target="_blank">
+              <button>RECIPE VIDEO</button>
+            </a>
+          </div>
+          <div id="hotchoc" class="recipe" style="display: none; margin-top: 20px;">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>2 cups milk</li>
+              <li>2 tbsp cocoa powder</li>
+              <li>2 tbsp sugar</li>
+              <li>50g dark chocolate (chopped)</li>
+              <li>Whipped cream (optional)</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Heat milk in a saucepan.</li>
+              <li>Add cocoa powder, sugar, and chocolate.</li>
+              <li>Stir until smooth and melted.</li>
+              <li>Pour into mug, top with cream, and enjoy!</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pakoras -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="pakora.jpeg" class="card-img-top" alt="Pakoras">
+        <div class="card-body">
+          <h5 class="recipe-title">Crispy Veg Pakoras</h5>
+          <p class="card-text">Spiced chickpea fritters loaded with veggies—perfect with chai on a rainy day!</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('pakora')">CHECK RECIPE</button>
+            <a href="https://youtube.com/shorts/Pr5i9K6I5bs?si=tAR9yzC7eb6Jo2Fx" target="_blank">
+              <button>RECIPE VIDEO</button>
+            </a>
+          </div>
+          <div id="pakora" class="recipe" style="display: none; margin-top: 20px;">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>1 cup besan (gram flour)</li>
+              <li>Mixed veggies (onion, spinach, potato, etc.)</li>
+              <li>1 tsp ajwain (carom seeds)</li>
+              <li>½ tsp turmeric, chili powder</li>
+              <li>Salt, water, oil to fry</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Mix besan, spices, veggies, and water into thick batter.</li>
+              <li>Heat oil and drop spoonfuls of batter.</li>
+              <li>Fry until golden brown and crisp.</li>
+              <li>Serve hot with chutney.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Khichdi -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="kichdi.jpeg" class="card-img-top" alt="Khichdi">
+        <div class="card-body">
+          <h5 class="recipe-title">Khichdi with Ghee & Pickle</h5>
+          <p class="card-text">Comfort in a bowl! Rice and lentils cooked with mild spices, topped with ghee and served with tangy pickle.</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('khichdi')">CHECK RECIPE</button>
+            <a href="https://youtube.com/shorts/FhZ776MPG08?si=zjuGSb0ii0dpj389" target="_blank">
+              <button>RECIPE VIDEO</button>
+            </a>
+          </div>
+          <div id="khichdi" class="recipe" style="display: none; margin-top: 20px;">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>½ cup rice</li>
+              <li>½ cup yellow moong dal</li>
+              <li>1 tbsp ghee</li>
+              <li>½ tsp cumin seeds</li>
+              <li>¼ tsp turmeric</li>
+              <li>Salt, water, pickle to serve</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Rinse rice and dal. Cook with 3 cups water, turmeric, and salt.</li>
+              <li>Tempering: Heat ghee, add cumin, pour over khichdi.</li>
+              <li>Mix well and serve hot with pickle.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function showRecipe(id) {
+    const allRecipes = document.querySelectorAll('.recipe');
+    allRecipes.forEach(div => div.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

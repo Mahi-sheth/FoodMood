@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome-free-6.7.2-web/css/all.min.css"> 
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+<nav style="height: 80px;" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+    <a class="navbar-brand" href="foodmood.html"><span style="font-size: xx-large;color: lightblue;">Food</span><span style="font-size: xx-large;color: white;">Mood</span></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="foodmood.html"><i class="fas fa-home me-1"></i>🏡Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./moods.html"><i class="fas fa-smile me-1"></i>Moods</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-utensils me-1"></i>🍴Recipes</a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="./aboutpage.html"><i class="fas fa-info-circle me-1"></i>About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i>📧ContactUs</a>
+        </li>
+    </ul>
+</div>
+</div>
+    </nav>
+  <style>
+    body {
+      margin-top: 70px;
+      background-color: #00050a;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://i.pinimg.com/736x/70/93/b0/7093b0f6895d246587bf4a7afacb79f3.jpg');
+      background-size: cover; 
+      background-repeat: no-repeat; 
+      background-position: center;
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .recipe-title {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+    button {
+      background-color: #011c39;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(3, 1, 45, 0.2);
+      margin: 5px 0;
+    }
+    .recipe {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <h1 style="color: beige; font-size: 100px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="text-center mb-4">CELEBRATION</h1>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="recipe-container"></div>
+  </div>
+
+  <script>
+    const recipes = [
+      {
+        id: "turmeric",
+        title: "Paneer Butter Masala",
+        image: "paneer.jpg",
+        description: "A rich, creamy, and mildly spiced tomato-based curry made with paneer cubes. A comfort food favorite!",
+        video: "https://youtu.be/bUounn_Bmy4?si=JjgRC4xugWIoyLo_",
+        ingredients: ["200g paneer cubes", "1 cup tomato puree", "2 tbsp butter", "1 tbsp cream", "1 tsp ginger-garlic paste", "1 tsp garam masala", "1 tsp red chili powder", "Salt to taste", "½ tsp turmeric powder", "Pinch of black pepper", "1 tsp honey or jaggery"],
+        steps: ["Heat butter in a pan, sauté ginger-garlic paste.", "Add tomato puree and cook until oil separates.", "Add spices and cook for 2 more mins.", "Add paneer cubes and simmer for 5 mins.", "Stir in cream, garnish with coriander. Serve hot!"]
+      },
+      {
+        id: "toast",
+        title: "Chocolate Truffle Cake",
+        image: "cake.jpg",
+        description: "Simple toasted bread with butter paired with a soothing cup of tea.",
+        video: "https://youtu.be/4LUWESkn2fM?si=xuN6VBLbrgQ2VIZe",
+        ingredients: ["2 slices bread", "Butter", "Your preferred tea"],
+        steps: ["Toast the bread and spread butter.", "Prepare tea as per preference.", "Enjoy together warm."]
+      },
+      {
+        id: "gheerice",
+        title: "Crispy Veg Kabab",
+        image: "kabab.png",
+        description: "Plain rice drizzled with golden ghee – minimal, calming, and delicious.",
+        video: "https://youtu.be/JTWDwvm9L3Q?si=Fakzgd0O2iQ78wEV",
+        ingredients: ["1 cup cooked rice", "1 tbsp ghee", "Salt to taste"],
+        steps: ["Cook rice and plate it.", "Drizzle hot ghee over it.", "Sprinkle a pinch of salt and serve."]
+      },
+      {
+        id: "daliya",
+        title: "Classic Cheesecake",
+        image: "cheesecake.png",
+        description: "Wholesome broken wheat porridge cooked with colorful vegetables and spices.",
+        video: "https://youtube.com/shorts/V59qaaGMyXg?si=8iqIHedVP5GjS5fM",
+        ingredients: ["½ cup daliya (broken wheat)", "Mixed vegetables (carrot, beans, peas)", "1 tsp cumin seeds", "1 tsp oil/ghee, salt, water"],
+        steps: ["Sauté cumin and veggies in oil.", "Add daliya and roast lightly.", "Add water and salt, cook until soft."]
+      },
+      {
+        id: "upma",
+        title: "Chole Bhature",
+        image: "chole.png",
+        description: "A savory South Indian breakfast made from semolina and tempered spices.",
+        video: "https://youtube.com/shorts/xpWtCOYMgQk?si=2SrCr0erTENnLn57",
+        ingredients: ["½ cup rava (semolina)", "Mustard seeds, urad dal", "Curry leaves, green chili", "Chopped veggies, salt, water"],
+        steps: ["Roast rava, keep aside.", "Temper spices and veggies.", "Add water, bring to boil.", "Add rava, cook until fluffy."]
+      },
+      {
+        id: "curry",
+        title: "Gulab Jamun",
+        image: "gulab.jpg",
+        description: "Sweet potatoes simmered in a creamy coconut-based gravy with gentle spices.",
+        video: "https://youtu.be/QFvd7u_YjVk?si=IBJd2sECPQ_eczca",
+        ingredients: ["2 sweet potatoes (cubed)", "1 cup coconut milk", "1 tsp curry powder", "1 onion, 1 garlic clove", "Salt, oil"],
+        steps: ["Sauté onion and garlic.", "Add sweet potatoes and spices.", "Pour coconut milk and simmer.", "Cook till potatoes are tender."]
+      }
+    ];
+
+    const container = document.getElementById('recipe-container');
+
+    function showRecipe(id) {
+      const all = document.querySelectorAll('.recipe');
+      all.forEach(div => div.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+
+    recipes.forEach(r => {
+      const col = document.createElement('div');
+      col.className = 'col';
+      col.innerHTML = `
+        <div class="card h-100 shadow-sm">
+          <img src="${r.image}" class="card-img-top" alt="${r.title}">
+          <div class="card-body">
+            <h5 class="recipe-title">${r.title}</h5>
+            <p class="card-text">${r.description}</p>
+            <div style="display: flex; gap: 10px;">
+              <button onclick="showRecipe('${r.id}')">CHECK RECIPE</button>
+              <a href="${r.video}" target="_blank">
+                <button>RECIPE VIDEO</button>
+              </a>
+            </div>
+            <div id="${r.id}" class="recipe" style="display: none; margin-top: 20px;">
+              <p><strong>Ingredients:</strong></p>
+              <ul>${r.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
+              <p><strong>Steps:</strong></p>
+              <ol>${r.steps.map(s => `<li>${s}</li>`).join('')}</ol>
+            </div>
+          </div>
+        </div>
+      `;
+      container.appendChild(col);
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

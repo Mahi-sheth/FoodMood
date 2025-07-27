@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome-free-6.7.2-web/css/all.min.css"> 
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+<nav style="height: 80px;" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+    <a class="navbar-brand" href="foodmood.html"><span style="font-size: xx-large;color: lightblue;">Food</span><span style="font-size: xx-large;color: white;">Mood</span></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="foodmood.html"><i class="fas fa-home me-1"></i>🏡Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./moods.html"><i class="fas fa-smile me-1"></i>Moods</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-utensils me-1"></i>🍴Recipes</a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="./aboutpage.html"><i class="fas fa-info-circle me-1"></i>About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i>📧ContactUs</a>
+        </li>
+    </ul>
+</div>
+</div>
+    </nav>
+  <style>
+    body {
+      margin-top: 70px;
+      background-color: #00050a;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://i.pinimg.com/736x/70/93/b0/7093b0f6895d246587bf4a7afacb79f3.jpg');
+      background-size: cover; 
+      background-repeat: no-repeat; 
+      background-position: center;
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .recipe-title {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+    button {
+      background-color: #011c39;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(3, 1, 45, 0.2);
+    }
+    .recipe {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-5">
+  <h1 style="color: beige;font-size: 100px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="text-center mb-4">SELF CARE</h1>
+  
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+    <!-- Template block for each recipe card -->
+    <!-- You will find all six cards below, with correct ids and showRecipe linkage -->
+
+    <!-- START LOOP -->
+    <!-- Replace placeholder values with correct IDs -->
+    
+    <!-- 1. Quinoa Chickpea Salad -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="quina.png" class="card-img-top" alt="Quinoa Chickpea Salad">
+        <div class="card-body">
+          <h5 class="recipe-title">Quinoa Chickpea Salad</h5>
+          <p class="card-text">A refreshing and protein-rich salad with quinoa, chickpeas, and fresh veggies tossed in lemon dressing.</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('salad')">CHECK RECIPE</button>
+            <a href="https://youtu.be/uQ-G9Hb-H8s?si=C4PMakBagXPXPoZs" target="_blank"><button>RECIPE VIDEO</button></a>
+          </div>
+          <div id="salad" class="recipe" style="display: none">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>1 cup cooked quinoa</li>
+              <li>1 cup boiled chickpeas</li>
+              <li>½ cup chopped cucumber</li>
+              <li>½ cup chopped tomatoes</li>
+              <li>¼ cup chopped onions</li>
+              <li>2 tbsp lemon juice</li>
+              <li>1 tbsp olive oil</li>
+              <li>Salt & pepper to taste</li>
+              <li>Optional: chopped coriander or parsley</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Mix quinoa, chickpeas, and veggies in a bowl.</li>
+              <li>Add lemon juice, olive oil, salt, and pepper. Toss well.</li>
+              <li>Garnish with herbs and chill before serving.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Vegetable Stir-Fry with Tofu -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="tofu.jpg" class="card-img-top" alt="Tofu Stir Fry">
+        <div class="card-body">
+          <h5 class="recipe-title">Vegetable Stir-Fry with Tofu</h5>
+          <p class="card-text">Colorful veggies stir-fried with tofu, garlic, ginger, and soy sauce. A quick and healthy dinner!</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('stirfry')">CHECK RECIPE</button>
+            <a href="https://youtu.be/ioCJLUSeTiM?si=5deIYI2NTp5Yhywm" target="_blank"><button>RECIPE VIDEO</button></a>
+          </div>
+          <div id="stirfry" class="recipe" style="display: none">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>1 cup firm tofu (cubed)</li>
+              <li>1 cup mixed vegetables</li>
+              <li>2 tbsp soy sauce</li>
+              <li>1 tbsp oil</li>
+              <li>2 cloves garlic (minced)</li>
+              <li>1 tsp grated ginger</li>
+              <li>Salt & pepper to taste</li>
+              <li>Optional: sesame seeds</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Sauté garlic and ginger in oil.</li>
+              <li>Add tofu and fry until golden.</li>
+              <li>Add vegetables and stir-fry.</li>
+              <li>Add soy sauce, season, and garnish.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Banana Oat Pancakes -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="banana.jpg" class="card-img-top" alt="Banana Oat Pancakes">
+        <div class="card-body">
+          <h5 class="recipe-title">Banana Oat Pancakes</h5>
+          <p class="card-text">Fluffy pancakes made with bananas, oats, and eggs. Naturally sweet and perfect for breakfast.</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('pancakes')">CHECK RECIPE</button>
+            <a href="https://youtu.be/HLx3058fSpo?si=kfs3gdHhvNRGYmJl" target="_blank"><button>RECIPE VIDEO</button></a>
+          </div>
+          <div id="pancakes" class="recipe" style="display: none">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>1 ripe banana</li>
+              <li>½ cup oats</li>
+              <li>1 egg</li>
+              <li>¼ cup milk</li>
+              <li>½ tsp baking powder</li>
+              <li>Optional: cinnamon, vanilla</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Mash banana. Mix with all ingredients.</li>
+              <li>Blend for smooth batter if desired.</li>
+              <li>Cook in greased pan until golden on both sides.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Zucchini Noodles with Pesto -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="zuchinni.png" class="card-img-top" alt="Zoodles">
+        <div class="card-body">
+          <h5 class="recipe-title">Zucchini Noodles with Pesto</h5>
+          <p class="card-text">Light and healthy spiralized zucchini tossed in basil pesto sauce.</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('zoodles')">CHECK RECIPE</button>
+            <a href="https://youtu.be/WZ27rmQdS6g?si=sAE94PS8B_6wvnsr" target="_blank"><button>RECIPE VIDEO</button></a>
+          </div>
+          <div id="zoodles" class="recipe" style="display: none">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>2 zucchinis (spiralized)</li>
+              <li>¼ cup pesto</li>
+              <li>1 tbsp olive oil</li>
+              <li>1 clove garlic</li>
+              <li>Optional: tomatoes, parmesan</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Sauté garlic in oil, add zucchini noodles.</li>
+              <li>Cook briefly, stir in pesto, and season.</li>
+              <li>Top with optional ingredients.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Dark Chocolate Chia Pudding -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="darkchoco.png" class="card-img-top" alt="Chia Pudding">
+        <div class="card-body">
+          <h5 class="recipe-title">Dark Chocolate Chia Pudding</h5>
+          <p class="card-text">A healthy dessert made with chia seeds, milk, and cocoa powder.</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('chia')">CHECK RECIPE</button>
+            <a href="https://youtube.com/shorts/aGj4ZKT2szY?si=8lIeO8d4fn4RigzD" target="_blank"><button>RECIPE VIDEO</button></a>
+          </div>
+          <div id="chia" class="recipe" style="display: none">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>2 tbsp chia seeds</li>
+              <li>½ cup milk</li>
+              <li>1 tbsp cocoa powder</li>
+              <li>1 tbsp maple syrup</li>
+              <li>½ tsp vanilla</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Mix all ingredients. Stir well.</li>
+              <li>Refrigerate 2+ hours or overnight.</li>
+              <li>Top with fruits or chocolate.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Cucumber Mint Detox Water -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="detox.jpg" class="card-img-top" alt="Detox Water">
+        <div class="card-body">
+          <h5 class="recipe-title">Cucumber Mint Detox Water</h5>
+          <p class="card-text">Hydrating drink infused with cucumber, mint, and lemon.</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('detox')">CHECK RECIPE</button>
+            <a href="https://youtube.com/shorts/fn7dsby_t3c?si=702U_s9c4TO9Es9e" target="_blank"><button>RECIPE VIDEO</button></a>
+          </div>
+          <div id="detox" class="recipe" style="display: none">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>½ cucumber, sliced</li>
+              <li>5–6 mint leaves</li>
+              <li>1 liter cold water</li>
+              <li>Optional: lemon slices</li>
+              <li>Ice cubes</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Mix all ingredients in a jar.</li>
+              <li>Chill for 1–2 hours.</li>
+              <li>Serve cold and stay refreshed!</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function showRecipe(id) {
+    document.getElementById(id).style.display = 'block';
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
